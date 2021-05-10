@@ -46,3 +46,6 @@ yarn-debug.log*
 .rubocop.yml
 .DS_Store
 .idea
+
+# Ignore application configuration
+/config/application.yml
