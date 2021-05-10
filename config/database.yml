@@ -6,10 +6,7 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 production:
-  <<: *default
-  database: heroku_pg_on_aws_production
-  username: heroku_pg_on_aws
-  password: <%= ENV['HEROKU_PG_ON_AWS_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
 
 development:
   <<: *default
